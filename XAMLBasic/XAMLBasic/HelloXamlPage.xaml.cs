@@ -16,9 +16,16 @@ namespace XAMLBasic
             InitializeComponent();
         }
 
-        async void OpenXAMLCodePage(object sender, EventArgs args)
+        void OnSliderValueChanged(object sender, ValueChangedEventArgs args)
         {
-            await Navigation.PushAsync(new XamlPlusCodePage());
+            valueLable.Text = args.NewValue.ToString("F3");
         }
+
+        async void OnButtonClicked(object sender, EventArgs args)
+        {
+            Button clickedButton = (Button)sender;
+            await DisplayAlert("Clicked", "Button " + clickedButton.Text + " has been clicked!", "OK");
+        }
+
     }
 }

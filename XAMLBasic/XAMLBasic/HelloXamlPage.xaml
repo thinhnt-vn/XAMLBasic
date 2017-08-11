@@ -4,8 +4,19 @@
              x:Class="XAMLBasic.HelloXamlPage"
              Title="Hello Xamarin Page"
              Padding="10, 40, 10, 10">
-    <Label Text="Hello, Xaml" VerticalOptions="Start" HorizontalTextAlignment="Center" Rotation="15" IsVisible="True" 
-           FontSize="Large"
-           FontAttributes="Bold"
-           TextColor="Aqua"/>
+    <StackLayout>
+        <Slider VerticalOptions="CenterAndExpand"
+                ValueChanged="OnSliderValueChanged"/>
+
+        <Label  x:Name="valueLable"
+                Text="A simple Label"
+                Font="Large"
+                HorizontalOptions="Center"
+                VerticalOptions="CenterAndExpand" />
+
+        <Button Text="Click Me!"
+                HorizontalOptions="Center"
+                VerticalOptions="CenterAndExpand"
+                Clicked="OnButtonClicked"/>
+    </StackLayout>
 </ContentPage>
