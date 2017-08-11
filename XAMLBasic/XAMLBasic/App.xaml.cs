@@ -13,7 +13,7 @@ namespace XAMLBasic
         {
             InitializeComponent();
 
-            MainPage = new GridDemoPage();
+            MainPage = new AbsoluteDemoPage();
         }
 
         protected override void OnStart()

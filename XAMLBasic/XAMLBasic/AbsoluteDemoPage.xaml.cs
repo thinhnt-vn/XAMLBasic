@@ -10,9 +10,9 @@ using Xamarin.Forms.Xaml;
 namespace XAMLBasic
 {
 	[XamlCompilation(XamlCompilationOptions.Compile)]
-	public partial class GridDemoPage : ContentPage
+	public partial class AbsoluteDemoPage : ContentPage
 	{
-		public GridDemoPage ()
+		public AbsoluteDemoPage ()
 		{
 			InitializeComponent ();
 		}
