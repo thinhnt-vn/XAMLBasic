@@ -13,7 +13,7 @@ namespace XAMLBasic
         {
             InitializeComponent();
 
-            MainPage = new NavigationPage(new HelloXamlPage());
+            MainPage = new HelloXamlPage();
         }
 
         protected override void OnStart()

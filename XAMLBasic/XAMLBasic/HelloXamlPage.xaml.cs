@@ -15,10 +15,5 @@ namespace XAMLBasic
         {
             InitializeComponent();
         }
-
-        async void OpenXAMLCodePage(object sender, EventArgs args)
-        {
-            await Navigation.PushAsync(new XamlPlusCodePage());
-        }
     }
 }

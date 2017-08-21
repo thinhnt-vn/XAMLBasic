@@ -4,8 +4,52 @@
              x:Class="XAMLBasic.HelloXamlPage"
              Title="Hello Xamarin Page"
              Padding="10, 40, 10, 10">
-    <Label Text="Hello, Xaml" VerticalOptions="Start" HorizontalTextAlignment="Center" Rotation="15" IsVisible="True" 
-           FontSize="Large"
-           FontAttributes="Bold"
-           TextColor="Aqua"/>
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <LayoutOptions x:Key="horiOption"
+                            Alignment="Center"/>
+
+            <LayoutOptions x:Key="vertOption"
+                           Alignment="Center"
+                           Expands="True"/>
+
+            <x:Double x:Key="borderWidth">3</x:Double>
+
+            <x:Double x:Key="rotationAngle">-15</x:Double>
+
+            <OnPlatform x:Key="textColor"  
+                        x:TypeArguments="Color"
+                        iOS="Red"
+                        Android="Aqua"
+                        WinPhone="#80FF80"/>
+
+            <Font x:Key="font">Large</Font>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+
+    <StackLayout>
+        <Button Text="Do this"
+                VerticalOptions="{StaticResource vertOption}"
+               HorizontalOptions="{StaticResource horiOption}"
+               BorderWidth ="{StaticResource borderWidth}"
+               Rotation="{StaticResource rotationAngle}"
+               Font="{StaticResource font}"
+               TextColor="{StaticResource textColor}"/>
+
+        <Button Text="Do that" 
+               VerticalOptions="{StaticResource vertOption}"
+               HorizontalOptions="{StaticResource horiOption}"
+               BorderWidth ="{StaticResource borderWidth}"
+               Rotation="{StaticResource rotationAngle}"
+               Font="{StaticResource font}"
+               TextColor="{StaticResource textColor}"/>
+
+        <Button Text="Do other thing"
+               VerticalOptions="{StaticResource vertOption}"
+               HorizontalOptions="{StaticResource horiOption}"
+               BorderWidth ="{StaticResource borderWidth}"
+               Rotation="{StaticResource rotationAngle}"
+               Font="{StaticResource font}"
+               TextColor="{StaticResource textColor}"/>
+    </StackLayout>
 </ContentPage>
